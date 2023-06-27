@@ -9,16 +9,14 @@ const TodoForm = (props) => {
     const formSubmitHandler = (event) => {
         event.preventDefault();
 
-        const id = Math.random().toString();
-        const enteredTitle = titleInputRef.current.value;
-        const enteredDescription = descriptionInputRef.current.value;
-        const enteredDate = dateInputRef.current.value;
+        const title = titleInputRef.current.value;
+        const description = descriptionInputRef.current.value;
+        const date = dateInputRef.current.value;
 
         const newTodoData = {
-            id,
-            enteredTitle,
-            enteredDescription,
-            enteredDate
+            title,
+            description,
+            date
         }
         props.newTodo(newTodoData)
     }
